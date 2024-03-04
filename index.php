@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     //validacion de credenciales
     if ($username === 'user' && $password === '123') {
         $_SESSION['user'] = $username;
-        header('Location: formulario.html');
+        header('Location: index.html');
         exit();
     } else {
         $error = "Usuario o contraseña incorrectos";
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="log.css">
+    <link rel="stylesheet" href="diseñoLogin.css">
     <style>
         body {
             font-family: Arial, sans-serif;
