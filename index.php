@@ -28,6 +28,8 @@ if (isset($_POST['submit'])) {
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-image: url(https://i.etsystatic.com/20936105/r/il/e64381/5698188052/il_600x600.5698188052_raj6.jpg);
+            background-attachment: scroll;
         }
 
         header {
