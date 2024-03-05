@@ -8,6 +8,7 @@ if (isset($_POST['submit'])) {
     //validacion de credenciales
     if ($username === 'user' && $password === '123') {
         $_SESSION['user'] = $username;
+
         header('Location: index.html');
         exit();
     } else {
