@@ -38,6 +38,10 @@ nav ul li a {
     cursor: pointer;
 }
 
+nav ul li a:hover {
+    color: #ffc107;  /*cursor*/
+}
+
 main {
     max-width: 800px;
     margin: 0 auto;
