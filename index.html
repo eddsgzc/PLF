@@ -11,6 +11,8 @@
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-image: ();
+            background-attachment: scroll;
         }
 
         header {
@@ -47,7 +49,6 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            display: none; /* Para ocultar el formulario por defecto */
         }
 
         .house {
@@ -78,6 +79,7 @@
             bottom: 0;
             width: 100%;
         }
+        
     </style>
 </head>
 <body>
@@ -86,49 +88,25 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#" id="casasEnVentaLink">Casas en Venta</a></li>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Iniciar Sesión</a></li>
+            <li><a href="CasaEnVenta.html" id="CasaEnVentaLink">Casa en Venta</a></li>
+            <li><a href="MenuPrincipal.html" id="MenuPrincipalLink"> Menú Principal</a></li>
+            <li><a href="CrearSubasta.html" id="CrearSubastaLink"> Crear Subasta</a></li>
         </ul>
     </nav>
-    <main id="casasEnVentaForm">
-        <div class="house">
-            <img src="casa1.jpg" alt="Casa en Venta">
-            <div class="description">
-                <h2>Casa de Infonavit en Venta</h2>
-                <p><strong>Estado:</strong> Nuevo León</p>
-                <p><strong>Municipio:</strong> Monterrey</p>
-                <p><strong>Precio Aproximado:</strong> $500,000 MXN</p>
-                <p><strong>Estatus:</strong> Disponible</p>
-            </div>
-        </div>
-        <div class="house">
-            <img src="casa2.jpg" alt="Casa en Venta">
-            <div class="description">
-                <h2>Casa de Infonavit en Venta</h2>
-                <p><strong>Estado:</strong> Ciudad de México</p>
-                <p><strong>Municipio:</strong> Tlalpan</p>
-                <p><strong>Precio Aproximado:</strong> $700,000 MXN</p>
-                <p><strong>Estatus:</strong> Apartada</p>
-            </div>
-        </div>
-    </main>
     <footer>
-        <p>Derechos Reservados &copy; 2024</p>
+        <p>&copy; 2024 Subastas de Casas</p>
     </footer>
-    
     <script>
-        //obtiene el enlace de la seccion y agrega el formulario
-        const casasEnVentaLink = document.getElementById('casasEnVentaLink');
-        const casasEnVentaForm = document.getElementById('casasEnVentaForm');
-
-        //evento click
-        casasEnVentaLink.addEventListener('click', function(event) {
-            //comportamiento
-            event.preventDefault();
-            //mostrar formulario
-            casasEnVentaForm.style.display = 'block';
-        });
+        // Redireccionar al hacer clic en el enlace "Casas en Venta"
+        document.getElementById("CasaEnVentaLink").onclick = function() {
+            location.href = "CasaEnVenta.html";
+        };
+        document.getElementById("MenuPrincipalLink").onclick = function(){
+            location.href = "MenuPrincipal.html";
+        }
+        document.getElementById("CrearSubastaLink").onclick = function(){
+            location.href = "CrearSubasta.html";
+        }
     </script>
 </body>
 </html>
