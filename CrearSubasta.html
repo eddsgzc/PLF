@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Subasta</title>
+    <link rel="stylesheet" href="crearSubasta.css">
+</head>
+<body>
+    <header>
+        <h1>Crear Subasta</h1>
+    </header>
+    <nav>
+        <ul>     
+            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
+            <li><a href="CasaEnVenta.html">Casas en Venta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Subir Nueva Casa en Venta</h2>
+        <form id="subirCasaForm">
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo" required><br>
+            <label for="estado">Estado:</label><br>
+            <input type="text" id="estado" name="estado" required><br>
+            <label for="municipio">Municipio:</label><br>
+            <input type="text" id="municipio" name="municipio" required><br>
+            <label for="precio">Precio Aproximado:</label><br>
+            <input type="text" id="precio" name="precio" required><br>
+            <label for="estatus">Estatus:</label><br>
+
+                <select id="estatus" name="estatus" required>
+                    <option value="disponible">Disponible</option>
+                    <option value="disponible">Apartada</option>
+                    <option value="disponible">Vendida</option>
+                </select><br>
+                <br>
+                <label for="fotos">Fotos: </label><br>
+                <input type="file" id="fotos" name="fotos" accept="image/*" multiple><br>
+            <input type="submit" value="Subir Casa">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Subastas de Casas</p>
+    </footer>
+    <script src="CrearSubasta.js"></script>
+</body>
+</html>
