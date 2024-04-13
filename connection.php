@@ -1,10 +1,12 @@
 <?php
-$user = 'root';
-$pass = '';
-$db = 'infonavit';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "infonavit";
 
-$db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-echo "Se ha conectado";
-
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
 ?>

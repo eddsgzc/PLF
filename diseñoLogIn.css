@@ -31,9 +31,9 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #ffc107;  /*cursor*/
-}
+.button:hover {
+    background-color: #2980b9;
+  }
 
 main {
     padding: 20px;

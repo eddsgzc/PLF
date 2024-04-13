@@ -1,0 +1,75 @@
+/* Estilos para el formulario de inicio de sesión */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.error {
+    color: #f00;
+    margin-top: 10px;
+}
+
+/* Estilos para el formulario de creación de cuenta */
+#crear_cuenta_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#crear_cuenta_form label {
+    margin-bottom: 8px;
+}
+
+#crear_cuenta_form input[type="text"],
+#crear_cuenta_form input[type="password"],
+#crear_cuenta_form input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#crear_cuenta_form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#crear_cuenta_form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.error {
+    color: #f00;
+    margin-top: 10px;
+}

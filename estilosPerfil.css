@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9EFDB;
+}
+
+header {
+    background-color: #3E3232;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="password"],
+.campo input[type="number"],
+.campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.campo input[type="password"] {
+    position: relative;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .mostrar-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.show-menu {
+    display: block;
+}

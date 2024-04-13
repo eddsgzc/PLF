@@ -1,21 +1,24 @@
 <?php
 session_start();
+include_once('connection.php'); //conexion
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    //validacion de credenciales
-    if ($username === 'user' && $password === '123') {
-        $_SESSION['user'] = $username;
+    $sql = "SELECT * FROM usuarios WHERE usuario = '$username' AND password = '$password'";
+    $result = $conn->query($sql);
 
-        header('Location: index.html');
+    if ($result->num_rows == 1) {
+        $_SESSION['user'] = $username;
+        header('Location: MenuPrincipal.html');
         exit();
     } else {
         $error = "Usuario o contraseña incorrectos";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -107,6 +110,7 @@ if (isset($_POST['submit'])) {
             <input type="submit" name="submit" value="Iniciar Sesión">
         </form>
         <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>
+        <p>¿No tienes una cuenta? <a href="CrearCuenta.php">¡Crea una!</a></p>
     </main>
     <footer>
         <p>Derechos Reservados &copy; 2024</p>
