@@ -1,3 +1,33 @@
+<?php
+session_start();
+include_once('connection.php'); //conexion
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $telefono = $_POST['telefono'];
+    $domicilio = $_POST['domicilio'];
+    $genero = $_POST['genero'];
+    $edad = calcular_edad($fecha_nacimiento);
+
+
+    $sql = "INSERT INTO usuarios (usuario, password, telefono, domicilio, genero, fecha_nacimiento, edad) VALUES ('$username', '$password', '$telefono', '$domicilio', '$genero', '$fecha_nacimiento', '$edad')";
+    if ($conn->query($sql) === TRUE) {
+        header('Location: index.php');
+        exit();
+    } else {
+        $error = "Error al crear la cuenta: " . $conn->error;
+    }
+}
+
+function calcular_edad($fecha_nacimiento) {
+    $fecha_actual = new DateTime();
+    $fecha_nacimiento = new DateTime($fecha_nacimiento);
+    $edad = $fecha_actual->diff($fecha_nacimiento);
+    return $edad->y;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
